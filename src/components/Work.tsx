@@ -8,6 +8,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
+    title: "Milo Dermatology",
+    category: "SMM / Brand Aesthetics",
+    image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=1200",
+    className: styles.colSpan12,
+  },
+  {
     title: "Kuriftu Resorts",
     category: "Creative Direction / Lifestyle",
     image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&q=80&w=1200",
