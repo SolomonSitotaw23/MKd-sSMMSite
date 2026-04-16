@@ -19,7 +19,7 @@ export function Resume() {
         stagger: 0.1,
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top 75%",
+          start: "top 85%",
         },
       });
     }, containerRef);
@@ -115,7 +115,7 @@ export function Resume() {
             </div>
 
             {/* Mastery Grid */}
-            <div className="resume-reveal space-y-12 p-10 md:p-14 bg-white/5 rounded-[2.5rem] border border-white/5 shadow-2xl">
+            <div className="resume-reveal space-y-12 p-8 md:p-12 lg:p-14 bg-white/5 rounded-[2.5rem] border border-white/5 shadow-2xl">
               <div className="flex items-center gap-6">
                  <div className="w-12 h-12 rounded-2xl bg-mustard/10 flex items-center justify-center text-mustard">
                   <Award size={24} />
@@ -123,7 +123,7 @@ export function Resume() {
                  <h3 className="text-2xl font-playfair font-bold text-cream">Mastery</h3>
               </div>
               
-              <div className="grid grid-cols-2 gap-x-12 gap-y-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-10">
                  <div className="space-y-4">
                     <p className="text-[10px] font-condensed tracking-widest text-mustard font-bold uppercase">Logic</p>
                     <ul className="space-y-3 text-cream/50 text-base font-light">

@@ -22,7 +22,7 @@ export function Navbar() {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-[100] transition-all duration-300 ${scrolled ? "bg-forest/95 backdrop-blur-md py-4" : "bg-transparent py-8"}`}>
+    <nav className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${scrolled ? "bg-forest/80 backdrop-blur-xl py-4 border-b border-white/5 shadow-2xl" : "bg-transparent py-8"}`}>
       <div className="container flex items-center justify-between">
         <Link href="/" className="text-2xl font-playfair font-black text-cream tracking-tighter">
           Mekdis<span className="text-mustard">.</span>
@@ -34,7 +34,7 @@ export function Navbar() {
             <Link 
               key={link.name} 
               href={link.href} 
-              className="text-[10px] font-condensed tracking-widest text-cream/70 hover:text-mustard transition-colors p-10"
+              className="text-[10px] font-condensed tracking-widest text-cream/70 hover:text-mustard transition-colors px-4 py-2"
             >
               {link.name}
             </Link>

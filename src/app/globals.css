@@ -34,7 +34,6 @@ body {
   font-family: var(--font-inter);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  border: 10px solid red !important; /* TEST BORDER */
 }
 
 /* Typography Foundation */
@@ -46,13 +45,13 @@ h1, h2, h3, h4 {
 
 /* Structural Helpers (Bulletproof CSS to ensure spacing works even if UTILITIES fail) */
 .section-padding {
-  padding-top: var(--spacing-section-mobile);
+  padding-top: calc(var(--spacing-section-mobile) + 4rem);
   padding-bottom: var(--spacing-section-mobile);
 }
 
 @media (min-width: 768px) {
   .section-padding {
-    padding-top: var(--spacing-section);
+    padding-top: calc(var(--spacing-section) + 2rem);
     padding-bottom: var(--spacing-section);
   }
 }

@@ -43,7 +43,7 @@ export function Work() {
         stagger: 0.2,
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 70%",
+          start: "top 85%",
         },
       });
     }, sectionRef);
@@ -76,7 +76,7 @@ export function Work() {
           {projects.map((project, idx) => (
             <div 
               key={idx}
-              className={`work-card group relative overflow-hidden rounded-[3rem] bg-forest/5 shadow-2xl transition-all duration-700 hover:-translate-y-2 ${project.className}`}
+              className={`work-card group relative overflow-hidden rounded-[3rem] bg-forest/5 shadow-2xl transition-all duration-700 hover:-translate-y-2 min-h-[450px] md:min-h-[600px] ${project.className}`}
             >
 
               {/* Media Layer */}
