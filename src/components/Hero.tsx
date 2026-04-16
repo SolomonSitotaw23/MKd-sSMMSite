@@ -50,7 +50,7 @@ export function Hero() {
           <div className="hero-reveal" style={{ position: 'relative' }}>
             <div className={styles.imageFrame}>
               <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1200" 
+                src="/images/photo_2025-08-18_15-39-10.jpg" 
                 alt="Mekdis Profile" 
                 loading="eager"
               />

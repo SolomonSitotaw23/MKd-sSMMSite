@@ -1,0 +1,137 @@
+.footerSection {
+  background-color: var(--forest);
+  color: var(--cream);
+  padding: 6rem 0 3rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.topSection {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+@media (min-width: 1024px) {
+  .topSection {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.brandArea {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.logo {
+  font-family: var(--font-playfair);
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--mustard);
+  line-height: 1;
+}
+
+.logo span {
+  color: var(--cream);
+  font-style: italic;
+  font-weight: 300;
+}
+
+.tagline {
+  color: rgba(245, 242, 234, 0.5);
+  font-size: 1.125rem;
+  font-weight: 300;
+  max-width: 24rem;
+  line-height: 1.5;
+}
+
+.contactCTA {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .contactCTA {
+    align-items: flex-end;
+    text-align: right;
+  }
+}
+
+.contactLabel {
+  font-size: 0.65rem;
+  font-family: var(--font-archivo);
+  letter-spacing: 0.4em;
+  color: var(--mustard);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.emailLink {
+  font-family: var(--font-playfair);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--cream);
+  text-decoration: none;
+  font-style: italic;
+  transition: color var(--transition-fast);
+}
+
+@media (min-width: 768px) {
+  .emailLink { font-size: 3.5rem; }
+}
+
+.emailLink:hover {
+  color: var(--mustard);
+}
+
+.bottomSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 768px) {
+  .bottomSection {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.copyright {
+  color: rgba(245, 242, 234, 0.4);
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 2rem;
+}
+
+.socialLink {
+  color: var(--cream);
+  font-size: 0.65rem;
+  font-family: var(--font-archivo);
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.socialLink:hover {
+  color: var(--mustard);
+}

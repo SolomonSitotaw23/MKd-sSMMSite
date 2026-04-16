@@ -32,7 +32,7 @@ export function About() {
           <div className="about-reveal">
             <div className={styles.imageFrame}>
               <img 
-                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=1280" 
+                src="/images/photo_2025-08-18_15-39-12.jpg" 
                 alt="Mekdis Professional" 
               />
               <div className={styles.imageGradient}></div>
