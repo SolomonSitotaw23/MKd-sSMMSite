@@ -1,0 +1,249 @@
+.resumeSection {
+  background-color: var(--forest);
+  color: var(--cream);
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5rem;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 7fr 5fr;
+    gap: 8rem;
+  }
+}
+
+/* Left: Journey */
+.journeyContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.headerLabel {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.headerLine {
+  height: 1px;
+  width: 3rem;
+  background-color: var(--mustard);
+}
+
+.headerText {
+  font-size: 0.65rem;
+  font-family: var(--font-archivo);
+  letter-spacing: 0.4em;
+  color: var(--mustard);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 3.75rem;
+  font-family: var(--font-playfair);
+  font-weight: 900;
+  line-height: 1.1;
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .title { font-size: 5rem; }
+}
+
+.title span {
+  font-style: normal;
+  color: var(--mustard);
+}
+
+.experienceList {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.jobItem {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.jobHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .jobHeader {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.jobYear {
+  color: var(--mustard);
+  font-family: var(--font-archivo);
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.jobTitle {
+  font-size: 2rem;
+  font-family: var(--font-playfair);
+  font-weight: 700;
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .jobTitle { font-size: 2.25rem; }
+}
+
+.jobCompany {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: rgba(245, 242, 234, 0.3);
+  font-size: 0.65rem;
+  font-family: var(--font-archivo);
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.jobDesc {
+  color: rgba(245, 242, 234, 0.5);
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.6;
+  max-width: 36rem;
+}
+
+/* Right: Education & Mastery */
+.academicContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.sectionGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.iconBox {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+  background-color: rgba(212, 175, 55, 0.1); /* mustard/10 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--mustard);
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-family: var(--font-playfair);
+  font-weight: 700;
+  font-style: italic;
+}
+
+.educationList {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.eduItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.eduYear {
+  font-size: 0.65rem;
+  font-family: var(--font-archivo);
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  color: var(--mustard);
+  text-transform: uppercase;
+}
+
+.eduDegree {
+  font-size: 1.25rem;
+  font-family: var(--font-playfair);
+  font-weight: 700;
+  color: var(--cream);
+}
+
+.eduSchool {
+  color: rgba(245, 242, 234, 0.4);
+  font-size: 0.875rem;
+}
+
+.masteryCard {
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .masteryCard { padding: 3rem 3.5rem; }
+}
+
+.masteryGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .masteryGrid { grid-template-columns: repeat(2, 1fr); gap: 3rem; }
+}
+
+.skillGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skillLabel {
+  font-size: 0.65rem;
+  font-family: var(--font-archivo);
+  letter-spacing: 0.2em;
+  color: var(--mustard);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.skillList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  color: rgba(245, 242, 234, 0.5);
+  font-size: 1rem;
+  font-weight: 300;
+}
