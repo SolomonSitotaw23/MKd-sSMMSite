@@ -10,25 +10,25 @@ const projects = [
   {
     title: "Milo Dermatology",
     category: "SMM / Brand Aesthetics",
-    image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1570172619380-41068dd8569a?auto=format&fit=crop&q=80&w=1200",
     className: styles.colSpan12,
   },
   {
     title: "Kuriftu Resorts",
     category: "Creative Direction / Lifestyle",
-    image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=1200",
     className: styles.colSpan8,
   },
   {
     title: "Enzi Footwear",
     category: "Brand Strategy / E-Commerce",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1533867617858-e7b97e060509?auto=format&fit=crop&q=80&w=1200",
     className: styles.colSpan4,
   },
   {
     title: "Zemen Bank Premium",
     category: "Corporate Identity / SMM",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200",
     className: styles.colSpan12,
   },
 ];

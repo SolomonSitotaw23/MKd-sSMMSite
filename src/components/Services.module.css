@@ -80,49 +80,75 @@
 }
 
 .card {
-  padding: 3rem;
-  background-color: var(--white);
+  padding: 3.5rem 3rem;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(16, 33, 29, 0.05); /* forest/5 */
-  transition: all var(--transition-slow);
+  border-radius: 2.5rem;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
 }
 
 .card:hover {
+  background: rgba(255, 255, 255, 0.8);
   border-color: var(--mustard);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  transform: translateY(-8px);
+  box-shadow: 0 40px 80px -20px rgba(16, 33, 29, 0.1);
+  transform: translateY(-12px);
 }
 
 .iconWrapper {
-  margin-bottom: 2.5rem;
-  padding: 1rem;
-  background-color: rgba(16, 33, 29, 0.05); /* forest/5 */
+  margin-bottom: 3rem;
+  padding: 1.25rem;
+  background-color: var(--forest);
   color: var(--mustard);
   width: fit-content;
-  border-radius: 1rem;
-  transition: background-color var(--transition-slow), color var(--transition-slow);
+  border-radius: 1.25rem;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(16, 33, 29, 0.2);
 }
 
 .card:hover .iconWrapper {
   background-color: var(--mustard);
   color: var(--forest);
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3);
 }
 
 .cardTitle {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-family: var(--font-playfair);
   font-weight: 900;
   color: var(--forest);
   margin-bottom: 1.5rem;
-  transition: color var(--transition-slow);
-}
-
-.card:hover .cardTitle {
-  color: var(--mustard);
+  transition: color 0.4s ease;
+  line-height: 1.2;
 }
 
 .cardDesc {
-  color: rgba(16, 33, 29, 0.6); /* forest/60 */
-  font-size: 1rem;
+  color: rgba(16, 33, 29, 0.7);
+  font-size: 1.05rem;
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.7;
+  max-width: 90%;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--mustard), transparent);
+  transform: scaleX(0);
+  transition: transform 0.6s ease;
+}
+
+.card:hover::after {
+  transform: scaleX(1);
 }

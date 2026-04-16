@@ -31,15 +31,23 @@ export function Services() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(".service-reveal", {
-        y: 40,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 75%",
-        },
+      const cards = gsap.utils.toArray<HTMLElement>('.service-reveal');
+      
+      cards.forEach((card) => {
+        gsap.from(card, {
+          y: 40,
+          opacity: 0,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 90%",
+            once: true,
+          },
+          onComplete: () => {
+            gsap.set(card, { clearProps: "all" });
+          }
+        });
       });
     }, containerRef);
     return () => ctx.revert();
