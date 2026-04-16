@@ -110,6 +110,52 @@
   color: var(--mustard);
 }
 
+.socialBar {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 3.5rem;
+  align-items: center;
+}
+
+.socialIcon {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(245, 242, 234, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.socialIcon::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, var(--mustard), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+
+.socialIcon:hover {
+  transform: translateY(-5px);
+  color: var(--forest);
+  background-color: var(--mustard);
+  border-color: var(--mustard);
+  box-shadow: 0 15px 30px rgba(212, 175, 55, 0.25);
+}
+
+.socialIcon:hover::before {
+  opacity: 0.15;
+}
+
 /* Image Framing */
 .imageFrame {
   position: relative;
