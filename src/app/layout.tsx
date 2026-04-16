@@ -32,8 +32,12 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${playfair.variable} ${inter.variable} ${archivo.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-cream text-forest selection:bg-mustard selection:text-forest">
+      <body
+        className="min-h-full flex flex-col bg-cream text-forest selection:bg-mustard selection:text-forest"
+        suppressHydrationWarning
+      >
         <div className="noise-overlay" />
 
         <SmoothScroll>

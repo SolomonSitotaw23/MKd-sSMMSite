@@ -76,7 +76,8 @@ export function Hero() {
               <Image 
                 src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1200" 
                 alt="Mekdis Profile" 
-                fill 
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw" 
                 className="object-cover grayscale contrast-125 brightness-90 hover:grayscale-0 transition-all duration-[2000ms]"
                 priority
               />

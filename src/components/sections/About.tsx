@@ -43,7 +43,8 @@ export function About() {
               <Image 
                 src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=1200" 
                 alt="Mekdis Professional" 
-                fill 
+                fill
+                sizes="(max-width: 1280px) 100vw, 50vw"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-forest/20 to-transparent"></div>

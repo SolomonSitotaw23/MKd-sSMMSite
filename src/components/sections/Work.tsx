@@ -84,7 +84,8 @@ export function Work() {
                 <Image 
                   src={project.image} 
                   alt={project.title} 
-                  fill 
+                  fill
+                  sizes="(max-width: 768px) 100vw, 100vw"
                   className="object-cover transition-transform duration-[2000ms] group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-forest/20 group-hover:bg-forest/10 transition-colors"></div>
