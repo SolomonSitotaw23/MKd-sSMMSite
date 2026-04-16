@@ -33,7 +33,7 @@ export function About() {
             <div className={styles.imageFrame}>
               <img 
                 src="/images/photo_2025-08-18_15-39-12.jpg" 
-                alt="Mekdis Professional" 
+                alt="Mekdes Professional" 
               />
               <div className={styles.imageGradient}></div>
             </div>

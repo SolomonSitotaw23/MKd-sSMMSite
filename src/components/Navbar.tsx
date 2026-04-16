@@ -29,7 +29,7 @@ export function Navbar() {
   return (
     <nav ref={navRef} className={styles.navbar}>
       <div className={`container ${styles.navContainer}`}>
-        <a href="#" className={styles.logo} onClick={closeMenu}>
+        <a href="#" className={`${styles.logo} ${isOpen ? styles.logoOpen : ''}`} onClick={closeMenu}>
           <img src="/logo.png" alt="Mekdes Logo" className={styles.logoIcon} />
           <span>Mekdes<span>.</span></span>
         </a>
@@ -47,7 +47,11 @@ export function Navbar() {
         <div className={styles.navActions}>
           <a href="#footer" className={styles.connectBtn}>Connect</a>
           
-          <button className={styles.hamburgerBtn} onClick={toggleMenu} aria-label="Toggle menu">
+          <button 
+            className={`${styles.hamburgerBtn} ${isOpen ? styles.hamburgerBtnOpen : ''}`} 
+            onClick={toggleMenu} 
+            aria-label="Toggle menu"
+          >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>

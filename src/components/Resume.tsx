@@ -25,9 +25,9 @@ export function Resume() {
   const experience = [
     {
       year: "2023 — Present",
-      title: "Senior Brand Strategist",
-      company: "Boutique Creative Agency, Addis Ababa",
-      desc: "Architecting high-fidelity digital ecosystems and cinematic content strategies for luxury heritage houses."
+      title: "Digital Marketing & SMM Lead",
+      company: "Milo Dermatology & Aesthetics Center",
+      desc: "Leading high-fidelity social growth and brand aesthetics, achieving 400% engagement increase for premium clinical services."
     },
     {
       year: "2021 — 2023",

@@ -35,9 +35,11 @@ const projects = [
 
 export function Work() {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const cursorRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      // Reveal Animation
       gsap.from(".work-card", {
         y: 60,
         opacity: 0,
@@ -49,12 +51,64 @@ export function Work() {
           start: "top 85%",
         },
       });
+
+      // Floating Label Interaction
+      const moveLabel = (e: MouseEvent) => {
+        gsap.to(cursorRef.current, {
+          x: e.clientX,
+          y: e.clientY,
+          duration: 0.5,
+          ease: "power2.out",
+        });
+      };
+
+      window.addEventListener('mousemove', moveLabel);
+      return () => window.removeEventListener('mousemove', moveLabel);
     }, sectionRef);
     return () => ctx.revert();
   }, []);
 
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const card = e.currentTarget;
+    const arrowBox = card.querySelector(`.${styles.arrowBox}`) as HTMLElement;
+    if (!arrowBox) return;
+
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    // Magnetic pull for the arrow box
+    const centerX = rect.width - 64; // Approx position of arrow box
+    const centerY = rect.height - 64;
+    
+    const deltaX = (x - centerX) * 0.15;
+    const deltaY = (y - centerY) * 0.15;
+
+    gsap.to(arrowBox, {
+      x: deltaX,
+      y: deltaY,
+      duration: 0.4,
+      ease: "power2.out",
+    });
+  };
+
+  const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
+    const arrowBox = e.currentTarget.querySelector(`.${styles.arrowBox}`);
+    gsap.to(arrowBox, {
+      x: 0,
+      y: 0,
+      duration: 0.6,
+      ease: "elastic.out(1, 0.3)",
+    });
+  };
+
   return (
     <section id="work" ref={sectionRef} className={`section-padding ${styles.workSection}`}>
+      {/* Custom Floating Label */}
+      <div ref={cursorRef} className={styles.floatingLabel}>
+        See Narrative
+      </div>
+
       <div className={`container ${styles.container}`}>
         
         {/* Section Header */}
@@ -74,12 +128,14 @@ export function Work() {
           </p>
         </div>
 
-        {/* Project Grid (Clean Bento) */}
+        {/* Project Grid */}
         <div className={styles.grid}>
           {projects.map((project, idx) => (
             <div 
               key={idx}
               className={`work-card ${styles.card} ${project.className}`}
+              onMouseMove={handleMouseMove}
+              onMouseLeave={handleMouseLeave}
             >
               {/* Media Layer */}
               <div className={styles.mediaLayer}>
@@ -91,7 +147,7 @@ export function Work() {
                 <div className={styles.mediaOverlay}></div>
               </div>
 
-              {/* Information Layer (Strictly Pinned) */}
+              {/* Information Layer */}
               <div className={styles.infoLayer}>
                 <div className={styles.infoContent}>
                   <span className={styles.category}>
