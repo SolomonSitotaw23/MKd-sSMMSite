@@ -1,6 +1,7 @@
 .workSection {
   background-color: var(--cream);
   overflow: hidden;
+  cursor: default; /* Restored standard cursor */
 }
 
 .container {
@@ -108,6 +109,7 @@
   background-color: rgba(16, 33, 29, 0.05); /* forest/5 */
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   transition: transform var(--transition-slow);
+  cursor: pointer; /* Restored cursor */
 }
 
 .card:hover {
@@ -198,6 +200,43 @@
   text-overflow: ellipsis;
 }
 
+.floatingLabel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--mustard);
+  color: var(--forest);
+  border-radius: 9999px;
+  font-family: var(--font-archivo);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease, color 0.4s ease;
+  white-space: nowrap;
+}
+
+.floatingLabelActive {
+  background-color: var(--cream);
+  color: var(--forest);
+  transform: translate(-50%, -50%) scale(1.4);
+  letter-spacing: 0.4em;
+}
+
+.workSection:hover .floatingLabel {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@media (max-width: 1023px) {
+  .floatingLabel { display: none !important; }
+}
+
 .arrowBox {
   width: 4rem;
   height: 4rem;
@@ -209,18 +248,87 @@
   align-items: center;
   justify-content: center;
   transform: rotate(-45deg);
-  transition: transform var(--transition-slow);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.1s ease-out, background-color 0.4s ease;
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+  position: relative;
+  z-index: 2;
 }
 
 .card:hover .arrowBox {
   transform: rotate(0deg);
+  background-color: var(--cream);
+  color: var(--forest);
 }
 
-.subtleOutline {
-  position: absolute;
+.modalOverlay {
+  position: fixed;
   inset: 0;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 3rem;
+  background: rgba(16, 33, 29, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
   pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.modalActive {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modalContent {
+  width: 100%;
+  max-width: 500px; /* Optimal size for Instagram Reels/Posts */
+  background: var(--forest);
+  border-radius: 2rem;
+  position: relative;
+  box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transform: scale(0.9);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modalActive .modalContent {
+  transform: scale(1);
+}
+
+.embedFrame {
+  width: 100%;
+  height: 700px;
+  border: none;
+  border-radius: 1.5rem;
+  background: var(--forest);
+}
+
+.closeModal {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: var(--mustard);
+  color: var(--forest);
+  border: none;
+  padding: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.closeModal:hover {
+  transform: scale(1.1) rotate(90deg);
+}
+
+@media (max-width: 767px) {
+  .embedFrame {
+    height: 60vh;
+  }
 }

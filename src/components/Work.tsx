@@ -1,7 +1,7 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, X } from 'lucide-react';
 import styles from './Work.module.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -12,30 +12,35 @@ const projects = [
     category: "SMM / Brand Aesthetics",
     image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&q=80&w=1200",
     className: styles.colSpan12,
+    instagramUrl: "https://www.instagram.com/p/DXBRskwih3A/embed/",
   },
   {
     title: "Kuriftu Resorts",
     category: "Creative Direction / Lifestyle",
     image: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=1200",
     className: styles.colSpan8,
+    instagramUrl: "https://www.instagram.com/p/C-X-Z-ZM-Z-/embed/", // Example placeholder
   },
   {
     title: "Enzi Footwear",
     category: "Brand Strategy / E-Commerce",
     image: "https://images.unsplash.com/photo-1533867617858-e7b97e060509?auto=format&fit=crop&q=80&w=1200",
     className: styles.colSpan4,
+    instagramUrl: "https://www.instagram.com/p/C_mX-Z-M-Z-/embed/", // Example placeholder
   },
   {
     title: "Zemen Bank Premium",
     category: "Corporate Identity / SMM",
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200",
     className: styles.colSpan12,
+    instagramUrl: "https://www.instagram.com/p/D-X-Z-ZM-Z-/embed/", // Example placeholder
   },
 ];
 
 export function Work() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const cursorRef = useRef<HTMLDivElement>(null);
+  const [selectedPost, setSelectedPost] = useState<string | null>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -71,47 +76,64 @@ export function Work() {
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const card = e.currentTarget;
     const arrowBox = card.querySelector(`.${styles.arrowBox}`) as HTMLElement;
-    if (!arrowBox) return;
+    if (!arrowBox || !cursorRef.current) return;
 
     const rect = card.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
-    // Magnetic pull for the arrow box
-    const centerX = rect.width - 64; // Approx position of arrow box
+    const arrowRect = arrowBox.getBoundingClientRect();
+    const isOverArrow = (
+      e.clientX >= arrowRect.left &&
+      e.clientX <= arrowRect.right &&
+      e.clientY >= arrowRect.top &&
+      e.clientY <= arrowRect.bottom
+    );
+
+    if (isOverArrow) {
+      cursorRef.current.innerText = "OPEN";
+      cursorRef.current.classList.add(styles.floatingLabelActive);
+    } else {
+      cursorRef.current.innerText = "SEE NARRATIVE";
+      cursorRef.current.classList.remove(styles.floatingLabelActive);
+    }
+
+    const centerX = rect.width - 64; 
     const centerY = rect.height - 64;
     
-    const deltaX = (x - centerX) * 0.15;
-    const deltaY = (y - centerY) * 0.15;
+    const deltaX = (x - centerX) * 0.2;
+    const deltaY = (y - centerY) * 0.2;
 
     gsap.to(arrowBox, {
       x: deltaX,
       y: deltaY,
-      duration: 0.4,
+      duration: 0.3,
       ease: "power2.out",
     });
   };
 
   const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
     const arrowBox = e.currentTarget.querySelector(`.${styles.arrowBox}`);
+    if (cursorRef.current) {
+      cursorRef.current.innerText = "SEE NARRATIVE";
+      cursorRef.current.classList.remove(styles.floatingLabelActive);
+    }
     gsap.to(arrowBox, {
       x: 0,
       y: 0,
-      duration: 0.6,
-      ease: "elastic.out(1, 0.3)",
+      duration: 0.8,
+      ease: "elastic.out(1.2, 0.4)",
     });
   };
 
   return (
     <section id="work" ref={sectionRef} className={`section-padding ${styles.workSection}`}>
-      {/* Custom Floating Label */}
       <div ref={cursorRef} className={styles.floatingLabel}>
-        See Narrative
+        SEE NARRATIVE
       </div>
 
       <div className={`container ${styles.container}`}>
         
-        {/* Section Header */}
         <div className={styles.header}>
           <div className={styles.headerLeft}>
             <div className={styles.label}>
@@ -128,7 +150,6 @@ export function Work() {
           </p>
         </div>
 
-        {/* Project Grid */}
         <div className={styles.grid}>
           {projects.map((project, idx) => (
             <div 
@@ -136,8 +157,8 @@ export function Work() {
               className={`work-card ${styles.card} ${project.className}`}
               onMouseMove={handleMouseMove}
               onMouseLeave={handleMouseLeave}
+              onClick={() => setSelectedPost(project.instagramUrl)}
             >
-              {/* Media Layer */}
               <div className={styles.mediaLayer}>
                 <img 
                   src={project.image} 
@@ -147,7 +168,6 @@ export function Work() {
                 <div className={styles.mediaOverlay}></div>
               </div>
 
-              {/* Information Layer */}
               <div className={styles.infoLayer}>
                 <div className={styles.infoContent}>
                   <span className={styles.category}>
@@ -164,12 +184,29 @@ export function Work() {
                 </div>
               </div>
 
-              {/* Subtle Outline */}
               <div className={styles.subtleOutline}></div>
             </div>
           ))}
         </div>
+      </div>
 
+      {/* Cinematic Modal Overlay */}
+      <div className={`${styles.modalOverlay} ${selectedPost ? styles.modalActive : ''}`} onClick={() => setSelectedPost(null)}>
+        <button className={styles.closeModal} onClick={() => setSelectedPost(null)}>
+          <X size={24} />
+        </button>
+        <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
+          {selectedPost && (
+            <iframe 
+              src={selectedPost}
+              className={styles.embedFrame}
+              allowTransparency={true}
+              frameBorder="0"
+              scrolling="no"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            ></iframe>
+          )}
+        </div>
       </div>
     </section>
   );
