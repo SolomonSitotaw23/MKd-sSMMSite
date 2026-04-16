@@ -30,9 +30,9 @@ export function Hero() {
               <div className={styles.catalystLine}></div>
               <span className={styles.catalystText}>Digital Creative Catalyst</span>
             </div>
-            <h1 className={`hero-reveal ${styles.title}`}>
-              Mekdis <br />
-              <span>Teshane</span>
+            <h1 className={styles.title}>
+              Mekides <br />
+              <span>Demissie</span>
             </h1>
             <p className={`hero-reveal ${styles.desc}`}>
               Architecting cinematic brand experiences and high-fidelity social narratives for luxury legends and visionary entrepreneurs.
@@ -58,7 +58,7 @@ export function Hero() {
             </div>
             <div className={styles.locationBadge}>
               <p className={styles.locationLabel}>Based in</p>
-              <p className={styles.locationText}>Paris, France</p>
+                <p className={styles.locationText}>Addis Ababa <br/> Ethiopia</p>
             </div>
           </div>
 

@@ -57,7 +57,7 @@ export function About() {
                 I am a creative strategist specializing in the art of luxury brand elevation. I bridge the heritage of boutique houses with the pulse of modern digital ecosystems.
               </p>
               <p className={styles.subText}>
-                Based in Europe, I transform digital presences into curated galleries of prestige. My approach is rooted in uncompromising quality, high-fidelity visual storytelling, and strategic growth.
+                Based in Addis Ababa, Ethiopia, I transform digital presences into curated galleries of prestige. My approach is rooted in uncompromising quality, high-fidelity visual storytelling, and strategic growth.
               </p>
             </div>
 
@@ -68,14 +68,14 @@ export function About() {
                   <MapPin size={18} />
                   <span className={styles.contactLabel}>Location</span>
                 </div>
-                <p className={styles.contactValue}>Paris / Global</p>
+                <p className={styles.contactValue}>Addis Ababa / Global</p>
               </div>
               <div className={styles.contactItem}>
                 <div className={styles.contactHeader}>
                   <Mail size={18} />
                   <span className={styles.contactLabel}>Inquiry</span>
                 </div>
-                <p className={styles.contactValue}>hello@mekdis.com</p>
+                <p className={styles.contactValue}>hello@mekides.com</p>
               </div>
             </div>
 

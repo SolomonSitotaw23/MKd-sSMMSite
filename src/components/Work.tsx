@@ -8,20 +8,20 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
-    title: "Aura Skincare",
-    category: "Creative Direction / SMM",
+    title: "Kuriftu Resorts",
+    category: "Creative Direction / Lifestyle",
     image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&q=80&w=1200",
     className: styles.colSpan8,
   },
   {
-    title: "L'Héritage Paris",
-    category: "Brand Strategy / Styling",
+    title: "Enzi Footwear",
+    category: "Brand Strategy / E-Commerce",
     image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=1200",
     className: styles.colSpan4,
   },
   {
-    title: "Maison de Luxe",
-    category: "Visual Storytelling",
+    title: "Zemen Bank Premium",
+    category: "Corporate Identity / SMM",
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200",
     className: styles.colSpan12,
   },

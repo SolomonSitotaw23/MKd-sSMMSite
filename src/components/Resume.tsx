@@ -26,26 +26,26 @@ export function Resume() {
     {
       year: "2023 — Present",
       title: "Senior Brand Strategist",
-      company: "L'Agence Elite, Paris",
+      company: "Boutique Creative Agency, Addis Ababa",
       desc: "Architecting high-fidelity digital ecosystems and cinematic content strategies for luxury heritage houses."
     },
     {
       year: "2021 — 2023",
       title: "Content Director",
-      company: "Vogue Hospitality Group",
+      company: "Kuriftu Hospitality Group",
       desc: "Led multi-platform creative direction, achieving 300% growth in high-net-worth engagement for luxury estates."
     }
   ];
 
   const education = [
     {
-      degree: "MBA in Luxury Management",
-      school: "International University, Paris",
+      degree: "MBA in Management",
+      school: "Addis Ababa University",
       year: "2020 — 2021"
     },
     {
       degree: "BA in Creative Communication",
-      school: "Academy of Fine Arts, Rome",
+      school: "Alle School of Fine Arts and Design",
       year: "2017 — 2020"
     }
   ];
