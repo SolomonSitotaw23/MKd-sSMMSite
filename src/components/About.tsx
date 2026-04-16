@@ -47,17 +47,17 @@ export function About() {
                 <span className={styles.ethosText}>The Ethos</span>
               </div>
               <h2 className={styles.title}>
-                Cinematic <br />
-                <span>Narratives</span>
+                Digital <br />
+                <span>Storytelling</span>
               </h2>
             </div>
             
             <div className={`about-reveal ${styles.textBlock}`}>
               <p className={styles.leadText}>
-                I am a creative strategist specializing in the art of luxury brand elevation. I bridge the heritage of boutique houses with the pulse of modern digital ecosystems.
+                I am a creative strategist specializing in social media marketing and brand growth. I bridge the story of modern brands with the pulse of digital ecosystems.
               </p>
               <p className={styles.subText}>
-                Based in Addis Ababa, Ethiopia, I transform digital presences into curated galleries of prestige. My approach is rooted in uncompromising quality, high-fidelity visual storytelling, and strategic growth.
+                Based in Addis Ababa, Ethiopia, I transform digital presences into engaging social platforms. My approach is rooted in consistent quality, high-fidelity visual storytelling, and strategic growth.
               </p>
             </div>
 

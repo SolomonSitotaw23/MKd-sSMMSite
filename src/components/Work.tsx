@@ -146,7 +146,7 @@ export function Work() {
             </h2>
           </div>
           <p className={styles.desc}>
-            Curated narratives and strategic visual directions engineered for global luxury dominance.
+            Curated content and strategic visual directions engineered for total market presence.
           </p>
         </div>
 

@@ -11,7 +11,7 @@ export function Footer() {
               Mekdes<span>.</span>
             </div>
             <p className={styles.tagline}>
-              Elevating luxury brands through cinematic content and strategic blueprints.
+              Growing brands through engaging content and strategic SMM blueprints.
             </p>
           </div>
 

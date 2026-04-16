@@ -27,13 +27,13 @@ export function Resume() {
       year: "2023 — Present",
       title: "Digital Marketing & SMM Lead",
       company: "Milo Dermatology & Aesthetics Center",
-      desc: "Leading high-fidelity social growth and brand aesthetics, achieving 400% engagement increase for premium clinical services."
+      desc: "Leading strategic social growth and brand aesthetics, achieving 400% engagement increase for premium clinical services."
     },
     {
       year: "2021 — 2023",
       title: "Content Director",
       company: "Kuriftu Hospitality Group",
-      desc: "Led multi-platform creative direction, achieving 300% growth in high-net-worth engagement for luxury estates."
+      desc: "Led multi-platform creative direction, achieving 300% growth in high-net-worth engagement for hospitality brands."
     }
   ];
 
@@ -121,9 +121,9 @@ export function Resume() {
                  <div className={styles.skillGroup}>
                     <p className={styles.skillLabel}>Logic</p>
                     <ul className={styles.skillList}>
-                      <li>Luxury Strategy</li>
-                      <li>Brand Ecology</li>
-                      <li>Growth Design</li>
+                      <li>SMM Strategy</li>
+                      <li>Content Ecosystems</li>
+                      <li>Growth Blueprints</li>
                     </ul>
                  </div>
                  <div className={styles.skillGroup}>
@@ -131,7 +131,7 @@ export function Resume() {
                     <ul className={styles.skillList}>
                       <li>Creative Direction</li>
                       <li>Visual Styling</li>
-                      <li>Contextual Design</li>
+                      <li>Platform Optimization</li>
                     </ul>
                  </div>
               </div>

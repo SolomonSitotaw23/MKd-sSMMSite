@@ -64,7 +64,7 @@ export function Hero() {
               <span>Demissie</span>
             </h1>
             <p className={`hero-reveal ${styles.desc}`}>
-              Architecting cinematic brand experiences and high-fidelity social narratives for luxury legends and visionary entrepreneurs.
+              Architecting cinematic brand experiences and engaging social media content for visionary entrepreneurs and modern brands.
             </p>
             <div className={`hero-reveal ${styles.actions}`}>
               <a href="#work" className="btn-primary">View Archives</a>
@@ -96,7 +96,7 @@ export function Hero() {
             <div className={styles.imageFrame}>
               <img 
                 src="/images/photo_2025-08-18_15-39-10.jpg" 
-                alt="Mekdis Profile" 
+                alt="Mekdes Profile" 
                 loading="eager"
               />
               <div className={styles.imageGradient}></div>

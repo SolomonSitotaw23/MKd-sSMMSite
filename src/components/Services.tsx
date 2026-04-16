@@ -20,8 +20,8 @@ const services = [
     icon: Users,
   },
   {
-    title: "Identity Refinement",
-    description: "Aligning your digital aesthetic with the exacting standards of global luxury.",
+    title: "Brand Alignment",
+    description: "Aligning your digital aesthetic with the professional standards of modern marketing.",
     icon: Sparkles,
   },
 ];
@@ -67,7 +67,7 @@ export function Services() {
              </h2>
           </div>
           <p className={styles.desc}>
-            We provide a holistic approach to social management, ensuring every touchpoint reflects uncompromising luxury.
+            We provide a holistic approach to social management, ensuring every touchpoint reflects your brand's unique story.
           </p>
         </div>
 
