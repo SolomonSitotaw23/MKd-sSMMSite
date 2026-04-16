@@ -14,14 +14,15 @@
 .topSection {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  align-items: flex-start;
+  gap: 4rem;
+  align-items: center;
+  text-align: center;
 }
 
 @media (min-width: 1024px) {
   .topSection {
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
 }
@@ -36,8 +37,8 @@
 
 @media (min-width: 1024px) {
   .brandArea {
-    align-items: flex-start;
-    text-align: left;
+    align-items: center;
+    text-align: center;
   }
 }
 
@@ -73,8 +74,8 @@
 
 @media (min-width: 1024px) {
   .contactCTA {
-    align-items: flex-end;
-    text-align: right;
+    align-items: center;
+    text-align: center;
   }
 }
 

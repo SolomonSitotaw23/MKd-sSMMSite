@@ -75,7 +75,7 @@ export function About() {
                   <Mail size={18} />
                   <span className={styles.contactLabel}>Inquiry</span>
                 </div>
-                <p className={styles.contactValue}>hello@mekides.com</p>
+                <p className={styles.contactValue}>hello@Mekdes.com</p>
               </div>
             </div>
 

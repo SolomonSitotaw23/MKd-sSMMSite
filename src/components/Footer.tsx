@@ -8,7 +8,7 @@ export function Footer() {
         <div className={styles.topSection}>
           <div className={styles.brandArea}>
             <div className={styles.logo}>
-              Mekides<span>.</span>
+              Mekdes<span>.</span>
             </div>
             <p className={styles.tagline}>
               Elevating luxury brands through cinematic content and strategic blueprints.
@@ -17,15 +17,15 @@ export function Footer() {
 
           <div className={styles.contactCTA}>
             <span className={styles.contactLabel}>Start a Conversation</span>
-            <a href="mailto:hello@mekides.com" className={styles.emailLink}>
-              hello@mekides.com
+            <a href="mailto:hello@Mekdes.com" className={styles.emailLink}>
+              hello@Mekdes.com
             </a>
           </div>
         </div>
 
         <div className={styles.bottomSection}>
           <div className={styles.copyright}>
-            &copy; {new Date().getFullYear()} Mekides Demissie. All rights reserved.
+            &copy; {new Date().getFullYear()} Mekdes Demissie. All rights reserved.
           </div>
 
           <div className={styles.socialLinks}>

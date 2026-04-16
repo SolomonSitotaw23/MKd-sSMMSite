@@ -39,14 +39,14 @@ export function Resume() {
 
   const education = [
     {
-      degree: "MBA in Management",
+      degree: "B.Sc. in Pharmacy",
       school: "Addis Ababa University",
-      year: "2020 — 2021"
+      year: "2017 — 2021"
     },
     {
-      degree: "BA in Creative Communication",
-      school: "Alle School of Fine Arts and Design",
-      year: "2017 — 2020"
+      degree: "Self-Learned SMM & Strategy",
+      school: "Independent Mastery",
+      year: "2021 — Present"
     }
   ];
 

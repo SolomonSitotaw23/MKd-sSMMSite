@@ -30,8 +30,8 @@ export function Navbar() {
     <nav ref={navRef} className={styles.navbar}>
       <div className={`container ${styles.navContainer}`}>
         <a href="#" className={styles.logo} onClick={closeMenu}>
-          <img src="/logo.png" alt="Mekides Logo" className={styles.logoIcon} />
-          <span>Mekides<span>.</span></span>
+          <img src="/logo.png" alt="Mekdes Logo" className={styles.logoIcon} />
+          <span>Mekdes<span>.</span></span>
         </a>
 
         {/* Desktop Links */}

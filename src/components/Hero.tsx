@@ -60,7 +60,7 @@ export function Hero() {
               <span className={styles.catalystText}>Digital Creative Catalyst</span>
             </div>
             <h1 className={styles.title}>
-              Mekides <br />
+              Mekdes <br />
               <span>Demissie</span>
             </h1>
             <p className={`hero-reveal ${styles.desc}`}>

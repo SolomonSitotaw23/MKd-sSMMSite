@@ -10,7 +10,7 @@ const projects = [
   {
     title: "Milo Dermatology",
     category: "SMM / Brand Aesthetics",
-    image: "https://images.unsplash.com/photo-1570172619380-41068dd8569a?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&q=80&w=1200",
     className: styles.colSpan12,
   },
   {
