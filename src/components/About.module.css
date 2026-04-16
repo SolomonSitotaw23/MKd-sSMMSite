@@ -5,10 +5,10 @@
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 5rem;
-  align-items: center;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 3rem;
+  align-items: stretch;
 }
 
 @media (min-width: 1024px) {
@@ -75,15 +75,11 @@
 }
 
 .title {
-  font-size: 3.75rem;
+  font-size: clamp(3rem, 10vw, 6rem);
   font-family: var(--font-playfair);
   font-weight: 900;
   color: var(--forest);
   line-height: 0.9;
-}
-
-@media (min-width: 768px) {
-  .title { font-size: 6rem; }
 }
 
 .title span {

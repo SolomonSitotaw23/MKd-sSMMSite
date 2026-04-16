@@ -8,7 +8,7 @@
 .footerContainer {
   display: flex;
   flex-direction: column;
-  gap: 6rem;
+  gap: 4rem;
 }
 
 .topSection {
@@ -30,11 +30,20 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .brandArea {
+    align-items: flex-start;
+    text-align: left;
+  }
 }
 
 .logo {
   font-family: var(--font-playfair);
-  font-size: 3rem;
+  font-size: clamp(2.5rem, 10vw, 3rem);
   font-weight: 900;
   color: var(--mustard);
   line-height: 1;
@@ -58,6 +67,8 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  align-items: center;
+  text-align: center;
 }
 
 @media (min-width: 1024px) {
@@ -78,16 +89,12 @@
 
 .emailLink {
   font-family: var(--font-playfair);
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 8vw, 3.5rem);
   font-weight: 700;
   color: var(--cream);
   text-decoration: none;
   font-style: italic;
   transition: color var(--transition-fast);
-}
-
-@media (min-width: 768px) {
-  .emailLink { font-size: 3.5rem; }
 }
 
 .emailLink:hover {
@@ -96,10 +103,12 @@
 
 .bottomSection {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: 2rem;
   padding-top: 3rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  align-items: center;
+  text-align: center;
 }
 
 @media (min-width: 768px) {

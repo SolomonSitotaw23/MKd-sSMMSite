@@ -15,16 +15,18 @@
 }
 
 .heroGrid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 4rem;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: stretch;
 }
 
 @media (min-width: 1024px) {
   .heroGrid {
+    display: grid;
     grid-template-columns: 7fr 5fr;
     gap: 6rem;
+    align-items: center;
   }
 }
 
@@ -51,21 +53,13 @@
 }
 
 .title {
-  font-size: 4.5rem;
+  font-size: clamp(3.5rem, 15vw, 11rem);
   font-family: var(--font-playfair);
   font-weight: 900;
   color: var(--cream);
   line-height: 0.8;
   letter-spacing: -0.05em;
   margin-bottom: 2rem;
-}
-
-@media (min-width: 768px) {
-  .title { font-size: 9rem; }
-}
-
-@media (min-width: 1280px) {
-  .title { font-size: 11rem; }
 }
 
 .title span {

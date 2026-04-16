@@ -7,7 +7,7 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 5rem;
+  gap: 3rem;
 }
 
 @media (min-width: 1024px) {
@@ -21,7 +21,7 @@
 .journeyContainer {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 3rem;
 }
 
 .headerLabel {
@@ -47,15 +47,11 @@
 }
 
 .title {
-  font-size: 3.75rem;
+  font-size: clamp(3.25rem, 11vw, 5rem);
   font-family: var(--font-playfair);
   font-weight: 900;
   line-height: 1.1;
   font-style: italic;
-}
-
-@media (min-width: 768px) {
-  .title { font-size: 5rem; }
 }
 
 .title span {
@@ -133,7 +129,7 @@
 .academicContainer {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 3rem;
 }
 
 .sectionGroup {

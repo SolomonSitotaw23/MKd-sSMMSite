@@ -54,16 +54,12 @@
 }
 
 .title {
-  font-size: 4.5rem;
+  font-size: clamp(3.5rem, 12vw, 9rem);
   font-family: var(--font-playfair);
   font-weight: 900;
   color: var(--forest);
   line-height: 0.85;
   letter-spacing: -0.05em;
-}
-
-@media (min-width: 768px) {
-  .title { font-size: 9rem; }
 }
 
 .title span {
@@ -82,8 +78,8 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-auto-rows: 450px;
-  gap: 2rem;
+  grid-auto-rows: 350px;
+  gap: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -191,7 +187,7 @@
 }
 
 .cardTitle {
-  font-size: 2.25rem;
+  font-size: clamp(1.75rem, 6vw, 3.75rem);
   font-family: var(--font-playfair);
   font-weight: 900;
   color: var(--cream);
@@ -200,10 +196,6 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-@media (min-width: 768px) {
-  .cardTitle { font-size: 3.75rem; }
 }
 
 .arrowBox {
