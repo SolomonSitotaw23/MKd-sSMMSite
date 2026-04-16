@@ -29,9 +29,9 @@ const projects = [
     instagramUrl: "https://www.instagram.com/p/C_mX-Z-M-Z-/embed/", // Example placeholder
   },
   {
-    title: "Zemen Bank Premium",
-    category: "Corporate Identity / SMM",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200",
+    title: "Lulo Coffee",
+    category: "SMM / Content Creation",
+    image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1200",
     className: styles.colSpan12,
     instagramUrl: "https://www.instagram.com/p/D-X-Z-ZM-Z-/embed/", // Example placeholder
   },
