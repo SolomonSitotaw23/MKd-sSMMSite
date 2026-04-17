@@ -25,7 +25,7 @@ export function Footer() {
 
         <div className={styles.bottomSection}>
           <div className={styles.copyright}>
-            &copy; {new Date().getFullYear()} Mekdes Demissie. All rights reserved.
+            &copy; {new Date().getFullYear()} Mekdes Girma. All rights reserved.
           </div>
 
           <div className={styles.socialLinks}>

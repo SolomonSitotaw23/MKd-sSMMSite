@@ -67,7 +67,7 @@ export function Hero() {
             </div>
             <h1 className={styles.title}>
               Mekdes <br />
-              <span>Demissie</span>
+              <span>Girma</span>
             </h1>
             <p className={`hero-reveal ${styles.desc}`}>
               Architecting cinematic brand experiences and engaging social media content for visionary entrepreneurs and modern brands.
